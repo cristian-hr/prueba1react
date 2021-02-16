@@ -5,10 +5,10 @@
     margin: 0 auto;
     padding: 20px;
     height: fit-content;
-    background: linear-gradient(rgb(196, 196, 196), rgb(153, 153, 153))
+    background: linear-gradient(rgb(94, 94, 94), rgb(34, 34, 34))
 }
 .blanco {
-    color: rgb(19, 19, 19);
+    color: rgb(224, 224, 224);
     text-decoration: none;
 }
 
