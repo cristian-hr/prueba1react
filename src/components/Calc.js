@@ -11,9 +11,14 @@ export default function Calc() {
         let str = event.target.value
         console.log(str.length)
 
+        var oper = ["+","-","*","x","/"]
+
         if (str.length > 3) {
             setState({error: "Ingrese solo números de un dígito"});
         } 
+        else if (!(oper.indexOf(str[str.length-1])+1) && !(Number(str[str.length-1])/1 == Number(str[str.length-1]))) {
+            setState({error: "No ingrese letras"});
+        }
         console.log(state.error)   
 
         //   if(!event.target.value){
@@ -44,7 +49,7 @@ export default function Calc() {
         else if (state.cont[1] == "-") {
             setState({ total: Number(state.cont[0]) - Number(state.cont[2]) })
         }
-        else if (state.cont[1] == "*") {
+        else if (state.cont[1] == "*" || state.cont[1] == "x") {
             setState({ total: Number(state.cont[0]) * Number(state.cont[2]) })
         }
         else if (state.cont[1] == "/") {
