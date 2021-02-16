@@ -23,9 +23,23 @@ export default function Memes () {
         console.log(ind) 
     }
 
+    function Prev () {
+        var img = document.getElementById("imgM");
+        if(ind==0){
+            ind = arr.length-1
+            img.src = arr[ind]
+        }
+        else {
+            ind = ind - 1
+            img.src = arr[ind]
+        }
+        console.log(ind) 
+    }
+
     return (            
         <div className="meme">
             <div>
+            <input type="submit" className="btnM" onClick={Prev} value="Prev"></input>  
             <img id="imgM" src={arr[ind]} alt=""/> 
             <input type="submit" className="btnM" onClick={Next} value="Next"></input>              
             </div>
