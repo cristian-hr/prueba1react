@@ -1,0 +1,15 @@
+.info {
+    font-style: italic;
+    font-size: 30px;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: fit-content;
+    text-align: center;
+}
+
+.info2 {
+    font-style: normal;
+    margin-top: 2%;
+    font-size: 15px;
+    text-align: end;
+}

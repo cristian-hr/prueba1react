@@ -1,0 +1,15 @@
+.meme {
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
+}
+
+.btnM {
+    text-align: center;
+    align-items: center;
+}
+
+#imgM {
+    height: 500px;
+    object-fit: cover;
+}

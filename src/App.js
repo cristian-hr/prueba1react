@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { Route } from "react-router-dom";
+import Nav from "./components/Nav";
+import Info from "./components/Info.js";
+import Calc from "./components/Calc.js";
+import Memes from "./components/Memes.js";
 
-function App() {
+function Resultado() { 
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Route
+        path="/"
+        component={Nav}
+      />
+      <div>
+      <Route
+        path="/info"
+        component={Info}
+      />
+      <Route
+        exact path="/"
+        component={Calc}        
+      />
+      <Route
+        exact path="/memes"
+        component={Memes} 
+      />
+      </div>     
     </div>
-  );
+  )
 }
 
-export default App;
+export default Resultado;
+
+
+

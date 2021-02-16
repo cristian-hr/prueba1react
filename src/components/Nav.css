@@ -1,0 +1,14 @@
+.cont {
+    font-size: large;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 20px;
+    height: fit-content;
+    background: linear-gradient(rgb(196, 196, 196), rgb(153, 153, 153))
+}
+.blanco {
+    color: rgb(19, 19, 19);
+    text-decoration: none;
+}
+
