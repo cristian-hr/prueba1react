@@ -41,13 +41,16 @@ export default function Calc() {
     }
 
     function ResetT() {
-        document.getElementById("input").value=null;
-        setState({ total: null })
+        document.getElementById("input").value="";
+        setState({ total: "" })
     }
 
     function Igual() {
         console.log(state.cont)
-        if (state.cont[1] == "+") {
+        if (state.cont == undefined) {
+            setState({ total:""})
+        }
+        else if (state.cont[1] == "+") {
             setState({ total: Number(state.cont[0]) + Number(state.cont[2]) })
         }
         else if (state.cont[1] == "-") {
