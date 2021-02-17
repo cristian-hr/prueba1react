@@ -39,10 +39,12 @@ export default function Memes () {
     return (            
         <div className="meme">
             <div>
-            <input type="submit" className="btnM" onClick={Prev} value="Prev"></input>  
             <img id="imgM" src={arr[ind]} alt=""/> 
-            <input type="submit" className="btnM" onClick={Next} value="Next"></input>              
             </div>
+            <div className="btnM">
+            <input type="submit" className="btnM2" onClick={Prev} value="Prev"></input>  
+            <input type="submit" className="btnM2" onClick={Next} value="Next"></input>
+            </div>              
         </div>
     )
 }

@@ -41,7 +41,8 @@ export default function Calc() {
     }
 
     function ResetT() {
-        setState({ valor: null })
+        document.getElementById("input").value=null;
+        setState({ total: null })
     }
 
     function Igual() {
