@@ -16,6 +16,9 @@ export default function Calc() {
         if (str.length > 3) {
             setState({error: "Ingrese solo números de un dígito"});
         } 
+        else if (str[0] == undefined){
+            setState({error: ""});
+        }
         else if (!(oper.indexOf(str[str.length-1])+1) && !(Number(str[str.length-1])/1 == Number(str[str.length-1]))) {
             setState({error: "No ingrese letras"});
         }
@@ -64,8 +67,8 @@ export default function Calc() {
                 <input id="input" type="text" value={state.valor} onChange={Cont}></input>
                 {state.error && <p className="error">{state.error}</p>}
                 </div>
-                <input type="submit" onClick={ResetT} value="Clear"></input>
-                <input type="submit" onClick={Igual} value="Igual"></input>
+                <input className="btnC" type="submit" onClick={ResetT} value="Clear"></input>
+                <input className="btnC" type="submit" onClick={Igual} value="Igual"></input>
             </div>
                 <span>{state.total}</span>
             </div>
